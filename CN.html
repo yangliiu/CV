@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘洋个人网站</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DIN+Condensed:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: "Hei", serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.2;
+        }
+        h1, h2 {
+            font-family: "DIN Condensed", sans-serif;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+        .name {
+            font-family: "YuMincho", sans-serif;
+        }
+        .chinese {
+            font-family: "Hei", sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+        .job {
+            margin-bottom: 15px;
+        }
+        .job-title {
+            font-weight: bold;
+        }
+        .date, .parenthetical {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .key-projects, .skills {
+            font-size: 14px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .tag {
+            background-color: #000;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .column-content {
+            display: block;
+        }
+        .toggle-btn {
+            display: none;
+            float: right;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .language-toggle {
+             display: flex;
+             justify-content: flex-end;
+             margin-bottom: 10px;
+        }
+       .flag {
+             font-size: 24px;
+             cursor: pointer;
+            margin-left: 10px;
+        }
+       .flag.current {
+             opacity: 0.5;
+             cursor: default;
+        }
+        
+        @media (max-width: 768px), (max-aspect-ratio: 1/1) {
+            .main-content {
+                flex-direction: column;
+            }
+            .column {
+                flex-basis: 100%;
+                width: 100%;
+            }
+            .column-content {
+                display: none;
+            }
+            .toggle-btn {
+                display: inline-block;
+            }
+            h2 {
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<div class="language-toggle">
+    <span class="flag current" id="cn-flag" title="中文">🇨🇳</span>
+    <span class="flag" id="en-flag" title="English">🇬🇧</span>
+</div>
+<body>
+    <div class="header">
+        <h1>Yang LIU <span class="name">刘洋</span></h1>
+        <p>yves.yang.liu@outlook.com</p>
+    </div>
+
+    <div class="main-content">
+        <div class="column">
+            <h2>职业 <button class="toggle-btn">+</button></h2>
+            <div class="column-content">
+                <div class="job">
+                    <p class="date">2018.07 ~ 2021.03</p>
+                    <p class="job-title"><img class="icon" src="https://s2.loli.net/2024/08/03/nVp8QhoE7txGPFa.png" alt="Bank of China icon">中国银行金融科技有限公司 <br>（中国银行软件中心）</p>
+                    <div class="key-projects">
+                        <p>主要项目:</p>
+                        <ul>
+                            <li>中银对公信贷管理平台 <br> UI & UX, 产品经理</li>
+                            <li>中银贷后管理平台 <br> UI & UX, 产品经理</li>
+                            <li>中银 "老年大学" 手机APP <br> UI & UX, 版本控制</li>
+                            <li>中银 "时间银行" 手机APP <br> UI & UX</li>
+                            <li>总后勤部差旅管理系统 <br> UI & UX</li>
+                            <li>上海进口博览会线上招商投资平台 <br> UI & UX</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job">
+                    <p class="date">2017.11 ~ 2018.06 实习</p>
+                    <p class="job-title"><img class="icon" src="https://s2.loli.net/2024/08/03/dgWqZYHoMc6IEV4.png" alt="BMW icon">宝马北京研发中心</p>
+                    <div class="key-projects">
+                        <p>主要项目:</p>
+                        <ul>
+                            <li>宝马 iVision 虚拟现实与 Head-Up-Display 全景显示, 用户体验设计，DEMO设计</li>
+                            <li>宝马进口申报关与物流管理系统 <br> UI & UX, 产品设计</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>教育 <button class="toggle-btn">+</button></h2>
+            <div class="column-content">
+                <div class="job">
+                    <p class="date">2021.04 ~ 现在 博士</p>
+                    <p class="job-title"><img class="icon" src="https://s2.loli.net/2024/08/03/8S6pNKEnty1ujkY.png" alt="Telecom icon">巴黎电信, 巴黎综合理工学院</p>
+                    <p class="skills">信息及网络研究院 INFRES</p>
+                    <div class="tags">
+                        <span class="tag">软体机器人</span>
+                        <span class="tag">触觉交互</span>
+                        <span class="tag">仿生</span>
+                        <span class="tag">用户研究</span>
+                        <span class="tag">人机交互</span>
+                        <span class="tag">机器学习</span>
+                    </div>
+                </div>
+                <div class="job">
+                    <p class="date">2015.04 ~ 2018.03 硕士</p>
+                    <p class="job-title"><img class="icon" src="https://s2.loli.net/2024/08/03/dsLTp5o4uaviqA8.png" alt="Tsukuba icon">筑波大学 日本</p>
+                    <p class="skills">人间综合科学研究课</p>
+                    <div class="tags">
+                        <span class="tag">产品设计</span>
+                        <span class="tag">感性工学</span>
+                        <span class="tag">情感交互</span>
+                    </div>
+                </div>
+                <div class="job">
+                    <p class="date">2016.07 ~ 2017.02 交换</p>
+                    <p class="job-title"><img class="icon" src="https://s2.loli.net/2024/08/03/WTxnVBfbQSpKlFw.png" alt="TU Delft icon">代尔夫特理工 荷兰</p>
+                    <p class="skills">工业设计工程系</p>
+                    <div class="tags">
+                        <span class="tag">交互设计</span>
+                        <span class="tag">用户体验</span>
+                    </div>
+                </div>
+                <div class="job">
+                    <p class="date">2014.04 ~ 2015.03 访问</p>
+                    <p class="job-title"><img class="icon" src="https://s2.loli.net/2024/08/03/uFTDeGycPMAtEpN.png" alt="Tokyo Tech icon">东京工业大学</p>
+                    <p class="skills">机械工程系</p>
+                    <div class="tags">
+                        <span class="tag">情感手势交互</span>
+                        <span class="tag">用户研究</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h2>学术 <button class="toggle-btn">+</button></h2>
+            <div class="column-content">
+                <ul>
+                    <li><span class="parenthetical">Current work</span> Biomimetic Emotion Detection and Expression: A Pneumatic Silicone Interface Mimicking Skin Cell Mechanics</li>
+                    <li><span class="parenthetical">Accepted HIMSC2024</span> Silicone-Based Haptic Interfaces: Enhancing Multimodal Interactions through Pneumatic Tactile Feedback</li>
+                    <li><span class="parenthetical">Accepted ICSR2024</span> Using a Pneumatic Tactile Steering Wheel to Enhance the Multi-Modal Takeover Request In Smart Vehicle</li>
+                    <li><span class="parenthetical">Under review TEI'25</span> Emotion-Augmented Cinema: Tangible Pneumatic Interfaces for Embodied Movie Experiences</li>
+                    <li><span class="parenthetical">Under review ROBIO2024</span> Emotion-Adaptive Pneumatic Haptic Systems for Affective Movie Experiences: Integrating Biomimetic Robotics and Machine Learning</li>
+                    <li><span class="parenthetical">Under review HUMANOIDS2024</span> Designing a Haptic Interface for Enhanced Non-Verbal Human-Robot Interaction: Integrating Heart and Lung Emotional Feedback</li>
+                    <li>"EMO": Design of an Emotional Communication Device based on Gestural Interactions, International Journal of Affective Engineering</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <h2>技能 <button class="toggle-btn">+</button></h2>
+        <div class="column-content">
+            <div class="skills">
+                <p><strong>语言:</strong> 英语 (流利), 日语 (流利), 法语 (日常交流), 汉语 (母语)</p>
+                <p><strong>软件:</strong> PS, AE, 3D MAX, AutoDesk CAD, Rhinoceros, Cinema 4D, Blender</p>
+                <p><strong>编程:</strong> Python, R, Arduino (C++)</p>
+                <p><strong>金融:</strong> CFA I <span class="parenthetical">2024年11月备考中</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function closeAllColumns() {
+            document.querySelectorAll('.column-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.textContent = '+';
+            });
+        }
+
+        function toggleColumn(header) {
+            const content = header.nextElementSibling;
+            const btn = header.querySelector('.toggle-btn');
+
+            if (window.innerWidth <= 768 || window.innerHeight > window.innerWidth) {
+                if (content.style.display === 'block') {
+                    // If the clicked column is already open, close it
+                    content.style.display = 'none';
+                    btn.textContent = '+';
+                } else {
+                    // If the clicked column is closed, close all columns and open this one
+                    closeAllColumns();
+                    content.style.display = 'block';
+                    btn.textContent = '-';
+                }
+            }
+        }
+
+        document.querySelectorAll('.column h2').forEach(header => {
+            header.addEventListener('click', function() {
+                toggleColumn(this);
+            });
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && window.innerHeight <= window.innerWidth) {
+                document.querySelectorAll('.column-content').forEach(content => {
+                    content.style.display = 'block';
+                });
+                document.querySelectorAll('.toggle-btn').forEach(btn => {
+                    btn.style.display = 'none';
+                });
+            } else {
+                closeAllColumns();
+                document.querySelectorAll('.toggle-btn').forEach(btn => {
+                    btn.style.display = 'inline-block';
+                });
+            }
+        });
+        document.getElementById('cn-flag').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (!this.classList.contains('current')) {
+            window.location.href = 'https://yangliiu.github.io/CV/CN.html';
+        }
+                });
+
+        document.getElementById('en-flag').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (!this.classList.contains('current')) {
+            window.location.href = 'https://yangliiu.github.io/CV/';
+        }
+                });
+    </script>
+</body>
+</html>
